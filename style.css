@@ -16,17 +16,6 @@ body{
 
     
 
-h1{
-    color:#22d3ee;
-    font-size:28px;
-    margin-bottom:10px;
-    font-family:'Courier New', monospace;
-}
-p{
-    color:#cbd5f5;
-    font-size:14px;
-    line-height:1.5;
-}
 .card{
     background-color:#0f172a;
     border:1px solid #334155;
@@ -95,6 +84,7 @@ li{
     }
 
     span{
+        color: cadetblue;
         padding: 2px;
         margin:5%;
         display: flex;
@@ -105,11 +95,7 @@ li{
         color:white;
         
     }
-    p{
-    color:#cbd5f5;
-    font-size:14px;
-    line-height:1.5;
-}
+   
 
 .poemas{
     display:inline-block;
@@ -140,4 +126,26 @@ li{
 .sui:hover{
     transform:scale(1.05);
     background:black;
+}
+
+.Pss:hover{
+    display:inline-block;
+    background:black;
+    color: green;
+    padding:4px 10px;
+    border-radius:20px;
+    font-weight:bold;
+    margin-top:5px;
+    transition:0.3s;
+}
+
+.Bss:hover{
+    display:inline-block;
+    background:black;
+    color:#22d3ee;
+    padding:4px 10px;
+    border-radius:20px;
+    font-weight:bold;
+    margin-top:5px;
+    transition:0.3s;
 }
