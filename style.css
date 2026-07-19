@@ -43,7 +43,13 @@ body{
         background-color: bisque;
         border-radius: 5px;
         border: 2px rgb(150, 204, 223) solid;
+        text-decoration: none;
     }
+
+    .lin{
+        text-decoration: none;
+    }
+
 .links{
     background:rgb(28, 82, 126);
     border:2px white solid;
