@@ -15,8 +15,7 @@ body{
     
 }
 
-
-
+    
     
 
 .card{
@@ -31,14 +30,18 @@ body{
     border-radius: 10px;
     border: 2px white solid;
 }
+.Int{
+    background-color: cadetblue;
+    border-radius: 5px;
+    border: 2px solid white;
+
+}
+h3{
+    color:burlywood;
+}
 .card img{
     border-radius:8px;
     margin:5px;
-}
-.paragrap{
-    color:cadetblue;
-    
-
 }
     .sujeto{
         background-color:rgba(0,0,0,0.6);
