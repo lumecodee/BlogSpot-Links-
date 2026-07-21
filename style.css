@@ -12,6 +12,7 @@ body{
     margin:0;
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     border-radius: 5px;
+    
 }
 
     
@@ -37,6 +38,8 @@ body{
     .Blospo{
         background-color: cadetblue;
     }
+
+
 }
     section p{
         color: cadetblue;
@@ -114,10 +117,6 @@ li{
     transition:0.3s;
 }
 
-.poemas:hover{
-    transform:scale(1.05);
-    background:black;
-        }
 .sui{
     display:inline-block;
     background:black;
