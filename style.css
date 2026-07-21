@@ -15,6 +15,8 @@ body{
     
 }
 
+
+
     
 
 .card{
@@ -35,12 +37,12 @@ body{
 }
 .paragrap{
     color:cadetblue;
-    .Blospo{
-        background-color: cadetblue;
-    }
-
+    
 
 }
+    .sujeto{
+        background-color:rgba(0,0,0,0.6);
+    }
     section p{
         color: cadetblue;
         background-color: bisque;
