@@ -15,8 +15,10 @@ body{
     
 }
 
-    
-    
+    .Target{
+        background-color: #334155;
+        color: white;
+    }
 
 .card{
     background-color:#0f172a;
@@ -46,13 +48,15 @@ h3{
     .sujeto{
         background-color:rgba(0,0,0,0.6);
     }
-    section p{
+    section  {
         color: cadetblue;
-        background-color: bisque;
+        background-color: whitesmoke;
         border-radius: 5px;
         border: 2px rgb(150, 204, 223) solid;
         text-decoration: none;
     }
+    
+
 
     .lin{
         text-decoration: none;
@@ -133,10 +137,6 @@ li{
     transition:0.3s;
 }
 
-.sui:hover{
-    transform:scale(1.05);
-    background:black;
-}
 
 .Pss:hover{
     display:inline-block;
