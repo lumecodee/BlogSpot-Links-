@@ -160,3 +160,23 @@ li{
     transition:0.3s;
 }
 
+@media (max-width:768px){
+
+.header{
+flex-direction:column;
+gap:12px;
+}
+
+h1{
+font-size:32px;
+}
+
+.btn{
+width:100%;
+}
+
+section{
+width:90%;
+padding:15px;
+}
+}
