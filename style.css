@@ -126,17 +126,6 @@ li{
     transition:0.3s;
 }
 
-.suii{
-    display:inline-block;
-    background:black;
-    color:white;
-    padding:8px 16px;
-    border-radius:20px;
-    font-weight:bold;
-    margin-top:10px;
-    transition:0.3s;
-}
-
 
 .Pss:hover{
     display:inline-block;
