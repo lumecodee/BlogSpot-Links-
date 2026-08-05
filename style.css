@@ -36,6 +36,7 @@ body{
     background-color: cadetblue;
     border-radius: 5px;
     border: 2px solid white;
+    color: black;
 
 }
 h3{
@@ -126,7 +127,17 @@ li{
     transition:0.3s;
 }
 
-
+div{
+    display:inline-block;
+    background:black;
+    color:cadetblue;
+    padding:8px 16px;
+    border-radius:20px;
+    font-weight:bold;
+    margin-top:10px;
+    transition:0.3s;
+    background-color: #0f172a;
+}
 .Pss:hover{
     display:inline-block;
     background:black;
