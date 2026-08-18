@@ -88,6 +88,7 @@ text-align:center;
 
 }
 
+
 div{
     
         display: flex;
@@ -132,7 +133,6 @@ border:2px solid white;
 }
 
 
-
 .links img{
 
 
@@ -140,13 +140,14 @@ width:45px;
 
 transition:.3s;
 
-
 }
 
 
 .links img:hover{
 
-
+ color:white;
+  filter: drop-shadow(0 0 5px  white)
+          drop-shadow(0 0 15px white);
 transform:
 
 scale(1.25)
@@ -225,7 +226,7 @@ margin-top:20px;
 padding:10px 25px;
 
 
-background:#22d3ee;
+background: cornflowerblue;
 
 color:black;
 
