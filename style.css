@@ -1,1034 +1,577 @@
-:root{
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
 
---dark:#0f172a;
---blue:#1c527e;
---cyan:#22d3ee;
---white:#ffffff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #050505;
+    --card: rgba(15, 15, 15, 0.88);
+
+    --text: #ffffff;
+    --muted: #9d9d9d;
+
+    --accent: #b8ff00;
+    --accent-soft: rgba(184, 255, 0, 0.25);
+
+    --border: rgba(255, 255, 255, 0.12);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at top,
+            #4b8585 0%,
+            #4b8585 45%,
+            #4b8585 100%
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   TARJETA PRINCIPAL
+========================= */
+
+.card {
+    width: min(100%, 520px);
+
+    padding: 45px 35px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 40px rgba(0, 0, 0, 0.8),
+        0 0 80px rgba(184, 255, 0, 0.04);
+
+    text-align: center;
+
+    animation: aparecer 0.8s ease;
+}
+
+
+/* =========================
+   PERFIL
+========================= */
+
+.perfil h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+.perfil h2 {
+    font-size: 1.05rem;
+
+    font-weight: 500;
+
+    color: var(--accent);
+
+    margin-bottom: 10px;
+}
+
+.perfil-texto p {
+    color: var(--muted);
+
+    font-size: 0.95rem;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.contacto img {
+    width: 25px;
+    height: 25px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 6px var(--accent-soft));
+}
+
+.contacto a {
+    color: #ddd;
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    transition: 0.3s;
+}
+
+.contacto a:hover {
+    color: var(--accent);
+
+    text-shadow:
+        0 0 10px var(--accent);
+}
+
+
+/* =========================
+   PROYECTOS
+========================= */
+
+.proyectos {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+.boton {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 18px;
+
+    border: 1px solid rgba(184, 255, 0, 0.4);
+
+    border-radius: 10px;
+
+    background: rgba(184, 255, 0, 0.05);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+
+    transition:
+        transform 0.3s,
+        background 0.3s,
+        box-shadow 0.3s;
+}
+
+.boton:hover {
+    background: rgba(184, 255, 0, 0.15);
+
+    color: var(--accent);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px var(--accent-soft);
+}
+
+
+/* =========================
+   BOTÓN WINDOWS
+========================= */
+
+.trigger {
+    margin-top: 35px;
+
+    width: 90px;
+    height: 90px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s,
+        filter 0.3s;
+}
+
+.trigger img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.trigger:hover {
+    transform: scale(1.1);
+
+    filter:
+        drop-shadow(0 0 12px var(--accent))
+        drop-shadow(0 0 25px var(--accent-soft));
+}
+
+.trigger:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   REDES SOCIALES
+========================= */
+
+.links {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-top: 25px;
+
+    max-width: 520px;
+}
+
+.links a {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    border: 1px solid transparent;
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+.links img {
+    width: 32px;
+    height: 32px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.3s,
+        filter 0.3s;
+}
+
+.links a:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(184, 255, 0, 0.35);
+
+    box-shadow:
+        0 0 20px rgba(184, 255, 0, 0.12);
+}
+
+.links a:hover img {
+    transform: scale(1.12);
+
+    filter:
+        drop-shadow(0 0 7px var(--accent));
+}
+
+
+/* =========================
+   OVERLAY WINDOWS 98
+========================= */
+
+.overlay {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    backdrop-filter: blur(4px);
+
+    z-index: 9999;
+}
+
+
+/* =========================
+   VENTANA
+========================= */
+
+.window {
+    width: min(100%, 430px);
+
+    background: #c0c0c0;
+
+    color: #000;
+
+    border: 3px solid #ffffff;
+
+    box-shadow:
+        8px 8px 0 #000;
+
+    font-family:
+        "MS Sans Serif",
+        Tahoma,
+        Arial,
+        sans-serif;
+
+    animation: windows98 0.2s ease;
+}
+
+
+/* =========================
+   TITLEBAR
+========================= */
+
+.titlebar {
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 4px 5px;
+
+    background:
+        linear-gradient(
+            to right,
+            #000080,
+            #1084d0
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.close-btn {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 2px solid white;
+
+    background: #c0c0c0;
+
+    color: black;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        inset -2px -2px #555,
+        inset 2px 2px #fff;
+}
+
+.close-btn:active {
+    box-shadow:
+        inset 2px 2px #555;
+}
+
+
+/* =========================
+   CONTENIDO WINDOWS
+========================= */
+
+.window-content {
+    min-height: 160px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 25px;
+}
+
+.window-content p {
+    font-size: 15px;
+
+    text-align: center;
+}
+
+
+/* ÍCONO DE ALERTA */
+
+.warning-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffff00;
+
+    border: 3px solid #000;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+/* BOTÓN OK */
+
+.ok-btn {
+    min-width: 80px;
+
+    padding: 6px 18px;
+
+    background: #c0c0c0;
+
+    border: 2px solid white;
+
+    box-shadow:
+        inset -2px -2px #555,
+        inset 2px 2px #fff;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.ok-btn:active {
+    box-shadow:
+        inset 2px 2px #555;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
 }
 
 
-*{
+@keyframes windows98 {
 
-box-sizing:border-box;
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
 
-}
-
-
-
-body{
-
-margin:0;
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-padding:20px;
-
-font-family:"Segoe UI",Arial,sans-serif;
-
-color:white;
-
-
-background:
-
-linear-gradient(
-rgba(15,23,42,.8),
-rgba(2,6,23,.9)
-),
-
-url("imagenes/Imagenes/We Heart It.gif");
-
-
-background-size:cover;
-
-background-position:center;
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 
 }
 
 
+/* =========================
+   RESPONSIVE
+========================= */
 
-/* TARJETA PRINCIPAL */
+@media (max-width: 500px) {
 
+    body {
+        padding: 20px 15px;
+    }
 
-.card{
+    .card {
+        padding: 35px 20px;
+    }
 
-
-width:100%;
-
-max-width:400px;
-
-padding:25px;
-
-background:rgba(15,23,42,.85);
-
-border:
-
-2px solid white;
-
-
-border-radius:20px;
-
-
-box-shadow:
-
-0 15px 50px rgba(0,0,0,.7);
-
-
-backdrop-filter:blur(10px);
-
-
-text-align:center;
-
-
-}
-
-
-div{
-    
-        display: flex;
-
+    .contacto {
         flex-direction: column;
+    }
 
+    .contacto a {
+        font-size: 0.82rem;
+    }
+
+    .proyectos {
+        flex-direction: column;
+    }
+
+    .boton {
         width: 100%;
-
-        padding: 10px;
-
-        gap: 15px;
-    
-}
-
-
-
-/* REDES */
-
-
-.links{
-
-
-display:flex;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:15px;
-
-
-padding:15px;
-
-
-background:#1c527e;
-
-border-radius:15px;
-
-border:2px solid white;
-
-
-}
-
-
-.links img{
-
-
-width:45px;
-
-transition:.3s;
-
-}
-
-
-.links img:hover{
-
- color:white;
-  filter: drop-shadow(0 0 5px  white)
-          drop-shadow(0 0 15px white);
-transform:
-
-scale(1.25)
-rotate(8deg);
-
-
-}
-
-
-
-/* PERFIL */
-
-
-h1{
-
-
-font-family:"Courier New";
-
-font-size:35px;
-
-color:#5fb6bd;
-
-text-decoration:underline;
-
-
-}
-
-
-
-h3{
-
-color:burlywood;
-
-}
-
-
-
-.contacto{
-
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-gap:10px;
-
-
-background:black;
-
-padding:10px;
-
-border-radius:10px;
-
-
-}
-
-
-
-.contacto img{
-
-width:25px;
-
-}
-
-
-
-.boton{
-
-
-display:inline-block;
-
-margin-top:20px;
-
-padding:10px 25px;
-
-
-background: cornflowerblue;
-
-color:black;
-
-
-font-weight:bold;
-
-
-border-radius:20px;
-
-
-text-decoration:none;
-
-
-transition:.3s;
-
-
-}
-
-
-.boton:hover{
-
-
-transform:scale(1.1);
-
-}
-
-
-
-/* BOTON GIF */
-
-
-.trigger{
-
-
-margin-top:25px;
-
-background:none;
-
-border:none;
-
-cursor:pointer;
-
-
-}
-
-
-
-.trigger img{
-
-
-width:180px;
-
-
-}
-
-
-
-/* WINDOWS 98 */
-
-
-.overlay{
-
-
-position:fixed;
-
-inset:0;
-
-
-display:none;
-
-
-justify-content:center;
-
-align-items:center;
-
-
-background:rgba(0,0,0,.4);
-
-
-}
-
-
-
-.window{
-
-
-width:340px;
-
-
-background:#c0c0c0;
-
-
-color:black;
-
-
-border:
-
-3px solid;
-
-
-border-color:white black black white;
-
-
-}
-
-
-
-.titlebar{
-
-
-background:#1c527e;
-
-color:white;
-
-
-padding:8px;
-
-
-display:flex;
-
-justify-content:space-between;
-
-
-font-weight:bold;
-
-
-}
-
-
-
-.titlebar button{
-
-
-background:#c0c0c0;
-
-
-border:
-
-2px solid;
-
-
-border-color:white black black white;
-
-
-}
-
-
-
-.window-content{
-
-
-padding:30px;
-
-text-align:center;
-
-
-}
-
-
-
-.window-content button{
-
-
-padding:8px 30px;
-
-cursor:pointer;
-
-
-}
-
-
-
-/* CELULAR */
-
-
-@media(max-width:600px){
-
-
-h1{
-
-font-size:28px;
-
-}
-
-
-.card{
-
-padding:15px;
-
-}
-
-
-
-}
-.int{
-    color: #22d3ee;
-    font-size: 20px;
-    text-decoration: underline;
-}
-:root{
-    --dark:#020617;
-    --card:#0f172a;
-    --blue:#1c527e;
-    --cyan:#22d3ee;
-    --white:#f8fafc;
-    --gold:#d6b879;
-}
-
-
-:root{
-    --dark:#020617;
-    --card:#0f172a;
-    --blue:#1c527e;
-    --cyan:#22d3ee;
-    --white:#ffffff;
-    --pink:#fb7185;
-}
-
-
-*{
-    box-sizing:border-box;
-}
-
-
-body{
-
-    margin:0;
-
-    min-height:100vh;
-
-    padding:30px 15px;
-
-
-    background:
-    linear-gradient(
-        rgba(2,6,23,.85),
-        rgba(15,23,42,.9)
-    ),
-    url("imagenes/Imagenes/We Heart It.gif");
-
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-attachment:fixed;
-
-
-    color:white;
-
-    font-family:
-    "Segoe UI",
-    Arial,
-    sans-serif;
-
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:30px;
-
-}
-
-
-
-/* =========================
-        BLOG HEADER
-========================= */
-
-
-.Bs{
-
-    width:100%;
-
-    max-width:700px;
-
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-
-    padding:25px;
-
-
-    background:
-    rgba(15,23,42,.85);
-
-
-    border:
-
-    2px solid white;
-
-
-    border-radius:20px;
-
-
-    box-shadow:
-
-    0 15px 40px rgba(0,0,0,.7);
-
-
-}
-
-
-.Bs h1{
-
-    color:#5fb6bd;
-
-    font-size:45px;
-
-    font-family:"Courier New";
-
-    text-decoration:underline;
-
-}
-
-
-.Bs h2{
-
-    color:burlywood;
-
-}
-
-
-.Bs img{
-
-    width:150px;
-
-    border-radius:20px;
-
-}
-
-
-
-
-/* =========================
-        SECCIONES
-========================= */
-
-
-.Int,
-.AzukaF,
-.poemas{
-
-
-    width:100%;
-
-    max-width:900px;
-
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-
-    padding:30px;
-
-
-    border-radius:20px;
-
-
-    background:
-
-    rgba(15,23,42,.85);
-
-
-    box-shadow:
-
-    0 15px 45px rgba(0,0,0,.7);
-
-
-}
-
-
-
-
-/* TEXTO */
-
-.Int p,
-.AzukaF p,
-.poemas p{
-
-
-    width:100%;
-
-
-    line-height:1.8;
-
-
-    font-size:18px;
-
-
-    color:#e2e8f0;
-
-}
-
-
-
-
-/* =========================
-       IMAGENES EN COLUMNA
-========================= */
-
-
-.Int img,
-.AzukaF img{
-
-
-    width:200px;
-
-
-    margin:15px;
-
-
-    border-radius:15px;
-
-
-    border:
-
-    2px solid white;
-
-
-    transition:.4s;
-
-
-}
-
-
-
-.Int img:hover,
-.AzukaF img:hover{
-
-
-    transform:
-
-    scale(1.08);
-
-
-    box-shadow:
-
-    0 0 25px var(--cyan);
-
-
-}
-
-
-
-/* =========================
-       ASUKA
-========================= */
-
-
-.AzukaF{
-
-
-    background:
-
-    linear-gradient(
-
-    135deg,
-
-    rgba(251,113,133,.35),
-
-    rgba(15,23,42,.9)
-
-    );
-
-
-    border:
-
-    2px solid var(--pink);
-
-}
-
-
-
-.AzukaF p:first-child{
-
-
-    text-align:center;
-
-
-    font-size:32px;
-
-
-    color:var(--pink);
-
-
-    font-weight:bold;
-
-
-}
-
-
-
-/* =========================
-        POEMAS
-========================= */
-
-
-.poemas{
-
-
-    background:
-
-    rgba(0,0,0,.75);
-
-
-    border:
-
-    2px solid var(--cyan);
-
-}
-
-
-
-.poemas h1{
-
-
-    color:var(--cyan);
-
-
-    font-family:
-
-    "Courier New";
-
-
-    font-size:40px;
-
-
-}
-
-
-.poemas p{
-
-
-    white-space:pre-line;
-
-
-}
-
-
-
-
-/* =========================
-        ANIMACION
-========================= */
-
-
-.Int,
-.AzukaF,
-.poemas{
-
-
-animation:
-
-entrada 1s ease;
-
-
-}
-
-
-
-@keyframes entrada{
-
-
-from{
-
-opacity:0;
-
-transform:translateY(40px);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-
-}
-
-
-
-
-/* =========================
-        MOVIL
-========================= */
-
-
-@media(max-width:600px){
-
-
-.Bs h1{
-
-font-size:32px;
-
-}
-
-
-.Int,
-.AzukaF,
-.poemas{
-
-padding:20px;
-
-}
-
-
-
-.Int img,
-.AzukaF img{
-
-width:150px;
-
-}
-
-
-.Int p,
-.AzukaF p,
-.poemas p{
-
-font-size:16px;
-
-}
-
-
-}
-@media (max-width: 600px){
-
-    body{
-
-        padding:15px 10px;
-
-        gap:20px;
-
     }
 
-
-    .Bs{
-
-        width:100%;
-
-        padding:20px;
-
-        border-radius:15px;
-
+    .links {
+        gap: 10px;
     }
-
-
-    .Bs h1{
-
-        font-size:30px;
-
-    }
-
-
-    .Bs h2{
-
-        font-size:18px;
-
-    }
-
-
-    .Bs img{
-
-        width:120px;
-
-        max-width:100%;
-
-    }
-
-
-
-    .Int,
-    .AzukaF,
-    .poemas{
-
-        width:100%;
-
-        padding:18px;
-
-        border-radius:15px;
-
-    }
-
-
-
-    .Int p,
-    .AzukaF p,
-    .poemas p{
-
-        font-size:16px;
-
-        line-height:1.6;
-
-        text-align:left;
-
-    }
-
-
-
-    /* Todas las imágenes */
-    
-    img{
-
-        max-width:100%;
-
-        height:auto;
-
-    }
-
-
-
-    .Int img,
-    .AzukaF img{
-
-        width:150px;
-
-        margin:8px;
-
-    }
-
-
-
-    .AzukaF p:first-child{
-
-        font-size:25px;
-
-        text-align:center;
-
-    }
-
-
-
-    .poemas h1{
-
-        font-size:30px;
-
-    }
-
-
-
-    hr{
-
-        width:90%;
-
-        margin:20px auto;
-
-    }
-
-}
-
-
-
-/* CELULARES MUY PEQUEÑOS */
-
-@media(max-width:350px){
-
-
-    body{
-
-        padding:10px 5px;
-
-    }
-
-
-    .Bs h1{
-
-        font-size:26px;
-
-    }
-
-
-    .Int,
-    .AzukaF,
-    .poemas{
-
-        padding:15px;
-
-    }
-
-
-    .Int p,
-    .AzukaF p,
-    .poemas p{
-
-        font-size:15px;
-
-    }
-
 
 }
