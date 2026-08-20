@@ -15,8 +15,8 @@
     --text: #ffffff;
     --muted: #9d9d9d;
 
-    --accent: #b8ff00;
-    --accent-soft: rgba(184, 255, 0, 0.25);
+    --accent: #1cabd6;
+    --accent-soft: rgba(65, 153, 224, 0.25);
 
     --border: rgba(255, 255, 255, 0.12);
 }
@@ -182,7 +182,7 @@ body {
 
     padding: 11px 18px;
 
-    border: 1px solid rgba(184, 255, 0, 0.4);
+    border: 1px solid rgba(52, 154, 212, 0.4);
 
     border-radius: 10px;
 
@@ -201,7 +201,7 @@ body {
 }
 
 .boton:hover {
-    background: rgba(184, 255, 0, 0.15);
+    background: rgba(32, 125, 212, 0.411);
 
     color: var(--accent);
 
@@ -309,10 +309,10 @@ body {
 .links a:hover {
     transform: translateY(-6px);
 
-    border-color: rgba(184, 255, 0, 0.35);
+    border-color: rgba(32, 145, 238, 0.486);
 
     box-shadow:
-        0 0 20px rgba(184, 255, 0, 0.12);
+        0 0 20px rgba(16, 113, 204, 0.12);
 }
 
 .links a:hover img {
@@ -470,7 +470,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    background: #ffff00;
+    background: #00b7ff;
 
     border: 3px solid #000;
 
