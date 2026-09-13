@@ -2,7 +2,7 @@
    CONFIGURACIÓN GENERAL
 ========================= */
 
-* { background-image: image(imagenes/Imagenes/galaxy.jpg);
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -80,7 +80,18 @@ body {
     animation: aparecer 0.8s ease;
 }
 
+h1{
+    font-size: clamp(2rem, 6vw, 3rem);
 
+    color: var(--accent);
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+    text-shadow:
+        0 0 10px rgba(199, 11, 11, 0.15));
+}
 /* =========================
    PERFIL
 ========================= */
@@ -96,10 +107,9 @@ body {
 
     text-shadow:
         0 0 10px rgba(199, 11, 11, 0.15));
-}
-
+}       
 .perfil h2 {
-    font-size: 1.05rem;
+    font-sizecd -: 1.05rem;
 
     font-weight: 500;
 
