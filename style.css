@@ -36,12 +36,22 @@ body {
         sans-serif;
 }
 
+    .header {
+        margin-bottom: 30px;
 
+        text-align: center;
+    }
+
+    h2 h3 h4 {
+
+        color: gray;
+    }
 /* =========================
    TARJETA PRINCIPAL
 ========================= */
 
 .card {
+
     width: 100%;
     max-width: 600px;
 
@@ -78,7 +88,6 @@ body {
         0 0 10px rgba(100, 220, 255, 0.45);
 }
 
-
 .perfil h3 {
     margin-top: 12px;
 
@@ -89,6 +98,9 @@ body {
     color: #72d9ff;
 }
 
+ul {
+    list-style: none;
+}   
 
 .perfil p {
     margin-top: 10px;
@@ -517,4 +529,3 @@ body {
     }
 
 }
-```
