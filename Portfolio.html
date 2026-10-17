@@ -1,58 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>PortFolio_Ismael</title>
+    <title>Ismael Pereira | Portfolio</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="header">
-     <h1>Ismael Pereira</h1>
-     <h2>Web and Software Developer</h2>
-     <h3>Soy Programador Estudiante autodidacta</h3>
-     </div>
-     <div class="card">
 
-        
-     <h4>Tecnologias que utilizo</h4>
-     <ul>
-        <li>html</li>
-        <li>css</li>
-        <li>javascript</li>
-        <li>node</li>
-        <li>Git GitHub</li>
-        <li> Vibe Coding / AI-assisted development</li>
-        
-     </ul>
-     <h2>Que tecnologia estoy aprendiendo?</h2>
-     <ul>
-      <li>MongoDB</li>
-     <li>Pseudocodigo</li>
-     <li>Javascript</li>
-     <li>Git GitBash</li>
-    </ul>
-    </div>
-        <div class="card">
-        <h3>Proyectos</h3>
-           <ul>
-            <li> RedMayor</li>
-            <li>StartUp - LumeCodeStudio</li>
-            <li>Apis Backend</li>
-           </ul> 
-            </div>
-            <div class="card">
-            <h4>Lo que estoy aprendiendo actualmente
+<header>
+    <h1>Ismael Pereira</h1>
+    <p>Web & Software Developer</p>
+    <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
 
-            </h4>
-                
-                <p>La disolucion de problemas Algoritmicos.
-                    Pseudocodigo y Creacion de soluciones Utlizando logica. </p>
-            
-                    <h5>Contacto</h5>
-                        <ul>
-                            <li>Email - Ismaelpiro38@gmail.com</li>
-                        </ul>
-                        </div>
+<main>
+    <section id="sobre-mi" class="card">
+        <h2>Sobre mí</h2>
+        <p>
+            Soy programador autodidacta. Me interesa desarrollar software,
+            resolver problemas y aprender nuevas tecnologías mediante
+            proyectos prácticos.
+        </p>
+    </section>
+
+    <section id="tecnologias" class="card">
+        <h2>Tecnologías</h2>
+        <ul>
+            <li>HTML y CSS</li>
+            <li>JavaScript</li>
+            <li>Node.js y Express</li>
+            <li>MongoDB</li>
+            <li>Git y GitHub</li>
+        </ul>
+
+        <h3>Actualmente aprendiendo</h3>
+        <p>Algoritmos, pseudocódigo, lógica de programación y backend.</p>
+    </section>
+
+    <section id="proyectos" class="card">
+        <h2>Proyectos</h2>
+
+        <article>
+            <h3>LumeCodeStudio</h3>
+            <p>Iniciativa personal de desarrollo de soluciones digitales.</p>
+        </article>
+
+        <article>
+            <h3>APIs Backend</h3>
+            <p>Prácticas de servidores, rutas y manejo de datos.</p>
+        </article>
+    </section>
+
+    <section id="contacto" class="card">
+        <h2>Contacto</h2>
+
+        <p>
+            Email :
+            <a href="mailto:Ismaelpiro38@gmail.com">
+                 Ismaelpiro38@gmail.com
+            </a>
+        </p>
+
+        <button id="copy-email">Copiar email</button>
+        <p id="message" aria-live="polite"></p>
+    </section>
+</main>
+
+<footer>
+    <p>© <span id="year"></span> Ismael Pereira</p>
+</footer>
+```
+
 </body>
 </html>
