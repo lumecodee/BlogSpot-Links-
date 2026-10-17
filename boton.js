@@ -55,3 +55,23 @@ document.addEventListener("keydown", function (event) {
 function openAlert() {
     // ...
 }
+
+
+// Mostrar el año actual
+document.querySelector("#year").textContent =
+new Date().getFullYear();
+
+// Copiar el email
+const button = document.querySelector("#copy-email");
+const message = document.querySelector("#message");
+const email = "[Ismaelpiro38@gmail.com](mailto:Ismaelpiro38@gmail.com)";
+
+button.addEventListener("click", async () => {
+try {
+await navigator.clipboard.writeText(email);
+message.textContent = "Email copiado correctamente.";
+} catch {
+message.textContent =
+"No se pudo copiar. Podés seleccionar el email manualmente.";
+}
+});
