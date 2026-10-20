@@ -4,78 +4,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ismael Pereira | Portfolio</title>
-    <link rel="stylesheet" href="Style.css">
-    <script src="script.js" defer></script>
+
+```
+<meta
+    name="description"
+    content="Portfolio de Ismael Pereira, desarrollador autodidacta enfocado en desarrollo web, JavaScript y backend."
+>
+
+<meta name="author" content="Ismael Pereira">
+
+<title>Ismael Pereira | Desarrollador Web & Backend</title>
+
+<link rel="stylesheet" href="estilo.css">
+<script src="script.js" defer></script>
+
 </head>
+
 <body>
 
-<header>
-    <h1>Ismael Pereira</h1>
-    <p>Web & Software Developer</p>
-    <nav>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#tecnologias">Tecnologías</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
+```
+<header class="hero">
+    <nav class="navbar" aria-label="Navegación principal">
+        <a href="#inicio" class="logo">IP<span>.</span></a>
+
+        <ul class="nav-links">
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#tecnologias">Tecnologías</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
     </nav>
+
+    <div class="hero-content" id="inicio">
+
+        <p class="eyebrow">DESARROLLO WEB · JAVASCRIPT · BACKEND</p>
+
+        <h1>
+            Ismael Pereira
+            <span>Desarrollador Web en formación</span>
+        </h1>
+
+        <p class="hero-description">
+            Desarrollo soluciones digitales mientras profundizo
+            mis conocimientos en programación, lógica y backend.
+            Mi objetivo es transformar ideas en aplicaciones útiles,
+            funcionales y bien estructuradas.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#proyectos" class="button button-primary">
+                Ver mis proyectos
+            </a>
+
+            <a href="#contacto" class="button button-secondary">
+                Contactarme
+            </a>
+        </div>
+
+        <p class="availability">
+            Abierto a oportunidades laborales, colaboraciones
+            y proyectos de desarrollo.
+        </p>
+
+    </div>
 </header>
 
 <main>
-    <section id="sobre-mi" class="card">
-        <h2>Sobre mí</h2>
-        <p>
-            Soy programador autodidacta. Me interesa desarrollar software,
-            resolver problemas y aprender nuevas tecnologías mediante
-            proyectos prácticos.
+
+    <section id="sobre-mi" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">MI PERFIL</p>
+            <h2>Sobre mí</h2>
+        </div>
+
+        <div class="card about-card">
+            <p>
+                Soy un desarrollador autodidacta interesado en la
+                creación de software, el desarrollo web y la resolución
+                de problemas mediante la programación.
+            </p>
+
+            <p>
+                Trabajo en fortalecer mis fundamentos de JavaScript,
+                lógica de programación, algoritmos y desarrollo backend,
+                aplicando lo aprendido en proyectos prácticos.
+            </p>
+
+            <p>
+                Busco seguir creciendo como desarrollador, participar
+                en proyectos que representen nuevos desafíos y aportar
+                soluciones con una mentalidad analítica, curiosidad
+                técnica y compromiso con el aprendizaje continuo.
+            </p>
+        </div>
+    </section>
+
+    <section id="tecnologias" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">MI HERRAMIENTA DE TRABAJO</p>
+            <h2>Tecnologías y conocimientos</h2>
+
+            <p>
+                Herramientas con las que trabajo y áreas en las que
+                estoy desarrollando mis habilidades.
+            </p>
+        </div>
+
+        <div class="tech-grid">
+
+            <article class="card tech-card">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                </ul>
+            </article>
+
+            <article class="card tech-card">
+                <h3>Backend</h3>
+                <ul>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>Desarrollo de APIs</li>
+                    <li>Manejo de datos</li>
+                </ul>
+            </article>
+
+            <article class="card tech-card">
+                <h3>Herramientas</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>Control de versiones</li>
+                </ul>
+            </article>
+
+            <article class="card tech-card">
+                <h3>En aprendizaje</h3>
+                <ul>
+                    <li>MongoDB</li>
+                    <li>Algoritmos</li>
+                    <li>Pseudocódigo</li>
+                    <li>Lógica de programación</li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="proyectos" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">TRABAJO PRÁCTICO</p>
+            <h2>Proyectos</h2>
+
+            <p>
+                Proyectos y prácticas con los que desarrollo
+                mis habilidades técnicas y construyo mi experiencia.
+            </p>
+        </div>
+
+        <div class="projects-grid">
+
+            <article class="card project-card">
+                <div class="project-number">01</div>
+
+                <h3>LumeCodeStudio</h3>
+
+                <p>
+                    Iniciativa personal orientada al desarrollo
+                    de soluciones digitales y a la exploración
+                    de ideas mediante la tecnología.
+                </p>
+
+                <div class="project-tags">
+                    <span>Desarrollo web</span>
+                    <span>Soluciones digitales</span>
+                </div>
+
+                <!-- Agregá un enlace cuando tengas el proyecto publicado. -->
+            </article>
+
+            <article class="card project-card">
+                <div class="project-number">02</div>
+
+                <h3>APIs Backend</h3>
+
+                <p>
+                    Prácticas de desarrollo backend enfocadas
+                    en la creación de rutas, el procesamiento
+                    de solicitudes y el manejo de datos.
+                </p>
+
+                <div class="project-tags">
+                    <span>JavaScript</span>
+                    <span>Node.js</span>
+                    <span>Express</span>
+                </div>
+
+                <!-- Reemplazá este comentario por el enlace al repositorio. -->
+            </article>
+
+        </div>
+
+        <p class="projects-note">
+            Cada proyecto representa una oportunidad para aplicar
+            conceptos, identificar problemas y mejorar mis habilidades.
         </p>
     </section>
 
-    <section id="tecnologias" class="card">
-        <h2>Tecnologías</h2>
-        <ul>
-            <li>HTML y CSS</li>
-            <li>JavaScript</li>
-            <li>Node.js y Express</li>
-            <li>MongoDB</li>
-            <li>Git y GitHub</li>
-        </ul>
+    <section id="objetivo" class="section">
+        <div class="card objective-card">
+            <p class="eyebrow">MI OBJETIVO PROFESIONAL</p>
 
-        <h3>Actualmente aprendiendo</h3>
-        <p>Algoritmos, pseudocódigo, lógica de programación y backend.</p>
+            <h2>Convertir problemas en soluciones digitales</h2>
+
+            <p>
+                Busco oportunidades para seguir desarrollándome
+                profesionalmente, colaborar con otros desarrolladores
+                y aplicar mis conocimientos en proyectos que aporten
+                valor a sus usuarios.
+            </p>
+        </div>
     </section>
 
-    <section id="proyectos" class="card">
-        <h2>Proyectos</h2>
+    <section id="contacto" class="section">
+        <div class="contact-card card">
 
-        <article>
-            <h3>LumeCodeStudio</h3>
-            <p>Iniciativa personal de desarrollo de soluciones digitales.</p>
-        </article>
+            <p class="eyebrow">HABLEMOS</p>
 
-        <article>
-            <h3>APIs Backend</h3>
-            <p>Prácticas de servidores, rutas y manejo de datos.</p>
-        </article>
-    </section>
+            <h2>¿Tenés una idea o una oportunidad?</h2>
 
-    <section id="contacto" class="card">
-        <h2>Contacto</h2>
+            <p>
+                Estoy abierto a conversar sobre proyectos,
+                colaboraciones y oportunidades de desarrollo.
+            </p>
 
-        <p>
-            Email :
-            <a href="mailto:Ismaelpiro38@gmail.com">
-                 Ismaelpiro38@gmail.com
+            <a
+                class="button button-primary"
+                href="mailto:Ismaelpiro38@gmail.com"
+            >
+                Enviarme un email
             </a>
-        </p>
 
-        <button id="copy-email">Copiar email</button>
-        <p id="message" aria-live="polite"></p>
+            <div class="email-container">
+                <p>
+                    <a href="mailto:Ismaelpiro38@gmail.com">
+                        Ismaelpiro38@gmail.com
+                    </a>
+                </p>
+
+                <button id="copy-email" type="button">
+                    Copiar email
+                </button>
+            </div>
+
+            <p id="message" aria-live="polite"></p>
+
+        </div>
     </section>
+
 </main>
 
-<footer>
-    <p>© <span id="year"></span> Ismael Pereira</p>
+<footer class="footer">
+    <p>
+        © <span id="year"></span> Ismael Pereira.
+        Desarrollado con HTML, CSS y JavaScript.
+    </p>
 </footer>
 ```
 
